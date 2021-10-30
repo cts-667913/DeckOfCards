@@ -22,11 +22,11 @@ namespace DeckOfCards.Controllers
             _cardSorting = cardSorting;
         }
 
-        [HttpGet("sortedCards")]
-        public object GetSortedCards([FromBody] List<string> selectedCards)
+        [HttpPost("sortedCards")]
+        public object GetSortedCards([FromBody] string [] selectedCards)
         {
 
-            List<String> deckOfCards = new List<String>(new string[] { "3c", "Js", "2d", "10h", "Kh", "8s", "Ac", "4h" });
+            List<String> deckOfCards = new List<String>(selectedCards);
             List<Cards> cards = new List<Cards>();
             foreach (var item in deckOfCards)
             {
