@@ -17,6 +17,8 @@ namespace DeckOfCards.Services
             {
                 List<string> allCards = new List<string>();
 
+
+                allCards.Add("Ac");
                 allCards.Add("2c");
                 allCards.Add("3c");
                 allCards.Add("4c");
@@ -25,12 +27,13 @@ namespace DeckOfCards.Services
                 allCards.Add("7c");
                 allCards.Add("8c");
                 allCards.Add("9c");
+                allCards.Add("10c");
+
                 allCards.Add("Jc");
-                allCards.Add("Kc");
                 allCards.Add("Qc");
                 allCards.Add("Kc");
-                allCards.Add("Ac");
 
+                allCards.Add("Ah");
                 allCards.Add("2h");
                 allCards.Add("3h");
                 allCards.Add("4h");
@@ -39,12 +42,14 @@ namespace DeckOfCards.Services
                 allCards.Add("7h");
                 allCards.Add("8h");
                 allCards.Add("9h");
+                allCards.Add("10h");
+
+
                 allCards.Add("Jh");
-                allCards.Add("Kh");
                 allCards.Add("Qh");
                 allCards.Add("Kh");
-                allCards.Add("Ah");
 
+                allCards.Add("Ad");
                 allCards.Add("2d");
                 allCards.Add("3d");
                 allCards.Add("4d");
@@ -53,12 +58,13 @@ namespace DeckOfCards.Services
                 allCards.Add("7d");
                 allCards.Add("8d");
                 allCards.Add("9d");
+                allCards.Add("10d");
+
                 allCards.Add("Jd");
-                allCards.Add("Kd");
                 allCards.Add("Qd");
                 allCards.Add("Kd");
-                allCards.Add("Ad");
 
+                allCards.Add("As");
                 allCards.Add("2s");
                 allCards.Add("3s");
                 allCards.Add("4s");
@@ -67,12 +73,11 @@ namespace DeckOfCards.Services
                 allCards.Add("7s");
                 allCards.Add("8s");
                 allCards.Add("9s");
+                allCards.Add("10s");
+
                 allCards.Add("Js");
-                allCards.Add("Ks");
                 allCards.Add("Qs");
                 allCards.Add("Ks");
-                allCards.Add("As");
-
 
                 returnValue = allCards;
             }
