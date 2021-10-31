@@ -1,3 +1,4 @@
+using DeckOfCards.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -25,7 +26,14 @@ namespace DeckOfCards
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddCors(o => o.AddPolicy("MyPolicy", builder =>
+            {
+                builder.AllowAnyOrigin()
+                       .AllowAnyMethod()
+                       .AllowAnyHeader();
+            }));
             services.AddControllers();
+            services.AddTransient<ICardSorting, CardSorting>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -35,7 +43,7 @@ namespace DeckOfCards
             {
                 app.UseDeveloperExceptionPage();
             }
-
+            app.UseCors("MyPolicy");
             app.UseHttpsRedirection();
 
             app.UseRouting();
